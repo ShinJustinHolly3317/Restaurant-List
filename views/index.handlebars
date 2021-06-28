@@ -17,30 +17,43 @@
 </div>
 
 <!-- restaurant list -->
-
 <div class="container mt-5">
   <div class="row">
     <div class="col-md-10 col-12 mx-auto">
-      <div class="card-columns">
+      <div class="row restaurant-cards">
         {{#each restaurants}}
-        <a href="/restaurants/{{this.id}}" class="text-secondary">
-          <div class="card mb-3">
-            <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
+          <div class="card mb-3"> 
+            <a href="/restaurants/{{this._id}}"><img class="card-img-top" src="{{this.image}}" alt="{{this.name}}"></a>
             <div class="card-body p-3">
-              <h6 class="card-title mb-1">{{this.name}}</h6>
-        
-              <div class="restaurant-category mb-1">
-                <i class="fas fa-utensils pr-2"></i> {{this.category}}
+              {{!-- Description area --}}
+              <a href="/restaurants/{{this._id}}" class="text-secondary">
+                <h6 class="card-title mb-1">{{this.name}}</h6>
+                <div class="restaurant-category mb-1">
+                  <i class="fas fa-utensils pr-2"></i> {{this.category}}
+                </div>
+              </a>
+              {{!-- Buttons area --}}
+              <div class="cdthird-row">
+                <div>
+                  <span class="badge badge-pill badge-danger font-weight-normal">
+                    {{this.rating}}
+                    <i class="fas fa-star fa-xs"></i>
+                  </span>
+                </div>
+                <form class="form-inline" action="" method="POST">
+                  <button type="button" class="btn btn-warning btn-sm" id="add-fav" data-id="{{this.id}}">Add favorite</button>
+                </form>
+                <form class="form-inline" action="" method="POST">
+                  <button type="submit" class="btn btn-warning btn-sm btn-delete" id="delete-fav"><a class="btn-delete" href="/restaurant/delete/{{this._id}}">Delete</a></button>
+                </form>
+                <form class="form-inline" action="" method="POST">
+                  <button type="button" class="btn btn-warning btn-sm" id=""><a
+                      href="/restaurant/edit/{{this._id}}">Edit</a></button>
+                </form>
               </div>
-        
-              <span class="badge badge-pill badge-danger font-weight-normal">
-                {{this.rating}}
-                <i class="fas fa-star fa-xs"></i>
-              </span>
-        
-            </div>
+
+            </div>  
           </div>
-        </a>
         {{/each }}
       </div>
     </div>

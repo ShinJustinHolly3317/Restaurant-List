@@ -1,0 +1,59 @@
+<div class="newlyadd-layout">
+  <div class="add-form">
+    <form method="POST" action="/restaurant/edit/{{restaurant._id}}">
+      <div class="form-group">
+        <label for="inputAddress">餐廳名稱</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="name" value="{{restaurant.name}}">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">English name</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+          name="name_en" value="{{restaurant.name_en}}">
+      </div>
+      <div class="form-group">
+        <label for="inputState">類別</label>
+        <select id="inputState" class="form-control" name="category">
+          <option selected hidden>請選擇餐廳種類</option>
+          <option {{isSelected restaurant.category '中東料理'}}>中東料理</option>
+          <option {{isSelected restaurant.category '日本料理'}}>日本料理</option>
+          <option {{isSelected restaurant.category '義式餐廳'}}>義式餐廳</option>
+          <option {{isSelected restaurant.category '酒吧'}}>酒吧</option>
+          <option {{isSelected restaurant.category '咖啡'}}>咖啡</option>
+          <option {{isSelected restaurant.category '美式'}}>美式</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">地址</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+          name="location" value="{{restaurant.location}}">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">電話</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+          name="phone" value="{{restaurant.phone}}">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">評分</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+          name="rating" value="{{restaurant.rating}}">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">資訊</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+          name="description" value="{{restaurant.description}}">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">圖片</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+          name="image" value="{{restaurant.image}}">
+      </div>
+      <div class="form-group">
+        <label for="inputAddress2">Google map</label>
+        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+          name="google_map" value="{{restaurant.google_map}}">
+      </div>
+
+      <button type="submit" class="btn btn-primary">送出</button>
+    </form>
+  </div>
+</div>
