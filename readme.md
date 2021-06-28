@@ -10,15 +10,15 @@ A website that you can manage your restaurants' data by Create / Edit / Delete.
 
 ## Preview
 ### 首頁 1
-![first page](/image/navbar.png)
+![first page](./image/navbar.png)
 ### 首頁 2
-![sec page](/image/index.png)
+![sec page](./image/index.png)
 ### 新增餐廳頁面
-![thi page](/image/create-page.png)
+![thi page](./image/create-page.png)
 ### 餐廳資訊業面
-![thi page](/image/detail.png)
+![thi page](./image/detail.png)
 ### 餐廳修改介面
-![thi page](/image/edit.png)
+![thi page](./image/edit.png)
 
 ## Environment and Requirements
 - [node.js: v10.15.0](https://nodejs.org/en/)
