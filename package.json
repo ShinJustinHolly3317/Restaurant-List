@@ -6,7 +6,8 @@
   "scripts": {
     "test": "standard && node app.js",
     "test-standard": "standard && node app.js",
-    "seed": "node /model/seeds/seeder["
+    "seeder": "node /model/seeds/seeder",
+    "start": "node /app.js"
   },
   "author": "",
   "license": "ISC",
