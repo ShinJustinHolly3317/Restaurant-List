@@ -1,4 +1,4 @@
-#Restaurant List
+# Restaurant List
 A website that you can manage your restaurants' data by Create / Edit / Delete.
 
 ## Features
@@ -10,21 +10,23 @@ A website that you can manage your restaurants' data by Create / Edit / Delete.
 
 ## Preview
 ### 首頁 1
-![first page](/image/navbar.png)
+![first page](./image/navbar.PNG)
 ### 首頁 2
-![sec page](/image/index.png)
+![sec page](./image/index.PNG)
 ### 新增餐廳頁面
-![thi page](/image/create-page.png)
+![thi page](./image/create-page.PNG)
 ### 餐廳資訊業面
-![thi page](/image/detail.png)
+![thi page](./image/detail.PNG)
 ### 餐廳修改介面
-![thi page](/image/edit.png)
+![thi page](./image/edit.PNG)
 
 ## Environment and Requirements
 - [node.js: v10.15.0](https://nodejs.org/en/)
 - [MongoDB: v4.4.6](https://www.mongodb.com/try/download/community)
 
 ## Getting started
+
+Execution below should be in cmd or git bash
 
 ### Download files
     git clone https://github.com/ShinJustinHolly3317/Restaurant-List.git
@@ -40,3 +42,4 @@ A website that you can manage your restaurants' data by Create / Edit / Delete.
 Use local host url to connect to server
 
     http://localhost:3000
+Congrats! You link it successfully!
