@@ -1,5 +1,4 @@
-#Restaurant List
-
+# Restaurant List
 A website that you can manage your restaurants' data by Create / Edit / Delete.
 
 ## Features
