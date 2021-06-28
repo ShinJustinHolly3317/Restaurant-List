@@ -1,4 +1,5 @@
 #Restaurant List
+
 A website that you can manage your restaurants' data by Create / Edit / Delete.
 
 ## Features
@@ -26,6 +27,8 @@ A website that you can manage your restaurants' data by Create / Edit / Delete.
 
 ## Getting started
 
+Execution below should be in cmd or git bash
+
 ### Download files
     git clone https://github.com/ShinJustinHolly3317/Restaurant-List.git
 ### Go to directory
@@ -40,3 +43,4 @@ A website that you can manage your restaurants' data by Create / Edit / Delete.
 Use local host url to connect to server
 
     http://localhost:3000
+Congrats! You link it successfully!
