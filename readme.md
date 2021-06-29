@@ -42,4 +42,5 @@ Execution below should be in cmd or git bash
 Use local host url to connect to server
 
     http://localhost:3000
+If you see `This server is runnig on http://localhost:3000`
 Congrats! You link it successfully!
