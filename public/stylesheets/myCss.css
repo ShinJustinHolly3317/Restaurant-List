@@ -122,6 +122,19 @@ a {
   color: #666666;
 }
 
+@media screen and (max-width: 1200px) {
+  .cdthird-row {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  }
+  .cdthird-row button {
+    margin: 5px;
+    width: 6rem;
+  }
+}
+
 @media screen and (max-width: 992px) {
   
   .card img{
@@ -134,12 +147,31 @@ a {
   .restaurant-show-title {
     font-size: 2rem;
   }
+
+  .card img{
+    height: 180px;
+  }
+  
+  .card {
+    width: 35%;
+  }
+
+  .cdthird-row button {
+    width: 7rem;
+  }
 }
 
 @media screen and (max-width: 575px) {
   
   .card img{
-    height: auto;
+    height: 180px;
   }
   
+  .card {
+    width: 70%;
+  }
+
+  .cdthird-row button {
+    width: 8rem;
+  }
 }
