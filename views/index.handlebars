@@ -23,10 +23,10 @@
       <div class="row restaurant-cards justify-content-center">
         {{#each restaurants}}
           <div class="card mb-3"> 
-            <a href="/restaurants/{{this._id}}"><img class="card-img-top" src="{{this.image}}" alt="{{this.name}}"></a>
+            <a href="/restaurant/{{this._id}}"><img class="card-img-top" src="{{this.image}}" alt="{{this.name}}"></a>
             <div class="card-body p-3">
               {{!-- Description area --}}
-              <a href="/restaurants/{{this._id}}" class="text-secondary">
+              <a href="/restaurant/{{this._id}}" class="text-secondary">
                 <h6 class="card-title mb-1">{{this.name}}</h6>
                 <div class="restaurant-category mb-1">
                   <i class="fas fa-utensils pr-2"></i> {{this.category}}
