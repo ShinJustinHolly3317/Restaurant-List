@@ -27,17 +27,7 @@ router.get('/edit/:id', (req, res) => {
   const id = req.params.id
   return RestaurantDb.findById(id)
     .lean()
-    .then(restaurant => res.render('edit', {
-      restaurant,
-      helpers: {
-        // This helper is for select option preview
-        isSelected: function (category1, category2) {
-          if (category1 === category2) {
-            return 'selected'
-          }
-        }
-      }
-    }))
+    .then(restaurant => res.render('edit', { restaurant }))
     .catch(error => console.log(error))
 })
 

@@ -16,6 +16,17 @@
   </div>
 </div>
 
+<form action="/" >
+  <select class="sorting-select custom-select" aria-label="Default select example" name="sortBy" onchange="this.form.submit()">
+    <option value="_id" {{#if (isSelected sortBy "_id")}}selected{{/if}}>最新餐廳</option>
+    <option value="name" {{#if (isSelected sortBy "name")}}selected{{/if}}>A-Z</option>
+    <option value="nameZ" {{#if (isSelected sortBy "nameZ")}}selected{{/if}}>Z-A</option>
+    <option value="rating" {{#if (isSelected sortBy "rating")}}selected{{/if}}>評價</option>
+    <option value="category" {{#if (isSelected sortBy "category")}}selected{{/if}}>餐廳種類</option>
+  </select>
+</form>
+
+
 <!-- restaurant list -->
 <div class="container mt-5">
   <div class="row">

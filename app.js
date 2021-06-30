@@ -14,7 +14,17 @@ app.use(express.static('public'))
 const exphbs = require('express-handlebars')
 
 /* Setting template engine */
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+app.engine('handlebars', exphbs({ 
+  defaultLayout: 'main',
+  helpers: {
+        // This helper is for select option preview
+        isSelected: function (category1, category2) {
+          if (category1 === category2) {
+            return 'selected'
+          }
+        },
+      } 
+}))
 app.set('view engine', 'handlebars')
 
 /* Setting server variables */
