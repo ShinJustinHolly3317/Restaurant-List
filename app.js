@@ -29,6 +29,10 @@ mongoose.connect('mongodb://localhost/restaurant-list', { useNewUrlParser: true,
 /* Initialze body parser */
 app.use(express.urlencoded({ extended: true }))
 
+/* Settings of method override */
+const methodOverride = require('method-override')
+app.use(methodOverride('_method'))
+
 // Route(by JSON): Html Get response from partial template
 // app.get('/', (req, res) => {
 //   res.render('index', { restaurants: restaurants.results })
@@ -82,7 +86,7 @@ app.get('/myFavorite', (req, res) => {
   res.render('index', { restaurants: favRestaurants })
 })
 
-// Route: Go to adding restaurnat
+// Route: Render adding page
 app.get('/newlyadd', (req, res) => {
   res.render('newlyadd')
 })
@@ -105,8 +109,8 @@ app.post('/newlyadd', (req, res) => {
     .catch(error => console.log(error)) // 這邊加reutrn 目的是為了讓這個post動作可以提早結束
 })
 
-// Route: Delete info
-app.get('/restaurant/delete/:id', (req, res) => {
+// Route: Delete info by RESTful method
+app.delete('/restaurant/:id', (req, res) => {
   const id = req.params.id
   return RestaurantDb.findById(id)
     .then(restaurant => restaurant.remove())
@@ -133,8 +137,8 @@ app.get('/restaurant/edit/:id', (req, res) => {
     .catch(error => console.log(error))
 })
 
-// Route: update edit onfo
-app.post('/restaurant/edit/:id', (req, res) => {
+// Route: update edit onfo by RESTful method
+app.put('/restaurant/:id', (req, res) => {
   const id = req.params.id
   return RestaurantDb.findById(id)
     .then(restaurant => {

@@ -43,8 +43,8 @@
                 <form class="form-inline" action="" method="POST">
                   <button type="button" class="btn btn-warning btn-sm" id="add-fav" data-id="{{this.id}}">Add favorite</button>
                 </form>
-                <form class="form-inline" action="" method="POST">
-                  <button type="submit" class="btn btn-warning btn-sm btn-delete" id="delete-fav"><a class="btn-delete" href="/restaurant/delete/{{this._id}}">Delete</a></button>
+                <form class="form-inline" action="/restaurant/{{ this._id }}/?_method=DELETE" method="POST">
+                  <button type="submit" class="btn btn-warning btn-sm btn-delete" id="delete-fav"><a class="btn-delete">Delete</a></button>
                 </form>
                 <form class="form-inline" action="" method="POST">
                   <button type="button" class="btn btn-warning btn-sm" id=""><a
