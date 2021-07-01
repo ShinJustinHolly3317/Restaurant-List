@@ -11,9 +11,6 @@ function changeAction (id) {
 addBtn.addEventListener('click', (e) => {
   let id = e.target.dataset.id
   if (e.target.classList.contains('btn-delete')){
-    console.log(id)
     changeAction(id)
   }
 })
-
-
