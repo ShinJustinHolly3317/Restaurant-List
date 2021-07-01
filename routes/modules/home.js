@@ -4,7 +4,7 @@ const express = require('express') // Include Express
 const router = express.Router()
 const RestaurantDb = require('../../model/restaurantInfo')
 
-const ascSort = ['ratingDesc', 'nameDesc']
+const descSort = ['ratingDesc', 'nameDesc']
 
 // Route(by MongoDB): Html Get response from partial template by MongoDB
 router.get('/', (req, res) => {
@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
   const chosenCategory = req.query.category ? req.query.category : ""
   RestaurantDb.find()
     .lean()
-    .sort({ [sortBy]: ascSort.includes(sortBy) ? 'desc' : 'asc' })
+    .sort({ [sortBy.includes('rating') ? 'rating' : 'name']: descSort.includes(sortBy) ? 'desc' : 'asc' })
     .then(restaurants => {
       let filterRestaurants = restaurants.filter(restaurant => restaurant.category.includes(chosenCategory))
       res.render('index', { restaurants: filterRestaurants, sortBy, category: chosenCategory })

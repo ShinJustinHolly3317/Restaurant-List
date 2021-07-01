@@ -43,7 +43,6 @@ app.use(methodOverride('_method'))
 const routes = require('./routes')
 app.use(routes)
 
-
 /* Start server and listen */
 app.listen(port, () => {
   console.log(`This server is runnig on http://localhost:${port}`)
