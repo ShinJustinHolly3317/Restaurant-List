@@ -10,7 +10,7 @@ A website that you can manage your restaurants' data by Create / Edit / Delete.
 
 ## Preview
 ### 首頁 1
-![first page](./image/navbar.PNG)
+![first page](./image/navbar-v2.PNG)
 ### 首頁 2
 ![sec page](./image/index.PNG)
 ### 新增餐廳頁面

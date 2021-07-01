@@ -1,6 +1,5 @@
 /* Require module */
 const express = require('express') // Include Express
-const restaurants = require('./restaurant.json') // Include JSON data
 const mongoose = require('mongoose') // Include mongoose library
 const RestaurantDb = require('./model/restaurantInfo.js')
 
@@ -43,6 +42,7 @@ app.use(methodOverride('_method'))
 /* Settings of router */
 const routes = require('./routes')
 app.use(routes)
+
 
 /* Start server and listen */
 app.listen(port, () => {

@@ -41,9 +41,15 @@ header {
   color: #9b4b4b;
 }
 
-.sorting-select {
-  width: 20%;
+.filterBar {
+  display: flex;
+  justify-content: space-around;
 }
+
+.sorting-select {
+  width: 15rem;
+}
+
 
 .form-control::placeholder {
   color: #aaaaaa;
